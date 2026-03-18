@@ -1,3 +1,4 @@
+
 // taking in user input
 
 // parsing through input
@@ -7,5 +8,3 @@
 // finding average number
 
 // function calls
-
-// printing to the terminal

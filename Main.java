@@ -24,9 +24,9 @@ public class Main {
             if (userInput.charAt(i) != ',') {
                 int number = Character.getNumericValue(userInput.charAt(i));
                 inputElements.add(number);
-                elements = elements + String.valueOf(number);
+                elements += String.valueOf(number);
                 if (i < userInput.length() - 2){
-                    elements = elements + ", ";
+                    elements += ", ";
                 }
             }
         }
@@ -49,7 +49,7 @@ public class Main {
         // finding average number
         float total = 0;
         for (int i = 0; i < inputElements.size(); i++) {
-            total = total + inputElements.get(i);
+            total += inputElements.get(i);
         }
         float avgElement = (total / inputElements.size());
         System.out.println("Average is: " + avgElement);
