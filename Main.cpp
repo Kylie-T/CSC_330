@@ -1,10 +1,9 @@
 #include <iostream>
+#include <iomanip>
 #include <vector>
 #include <string>
 
 using namespace std;
-
-
 
 vector<int> inputValues () {
     // taking in user input
@@ -42,12 +41,12 @@ void minimum(vector<int> inputElements) {
 
 void average(vector<int> inputElements) {
     // finding average number
-    float total;
+    double total;
     for (int value : inputElements) {
         total += value;
     }
-    float avgElement = total / inputElements.size();
-    cout << "Average is: " << avgElement << endl;
+    double avgElement = total / inputElements.size();
+    cout << "Average is: " << setprecision(11) << avgElement << endl;
 }
 
 int main() {

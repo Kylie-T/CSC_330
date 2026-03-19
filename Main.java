@@ -47,11 +47,11 @@ public class Main {
 
     public static void average(ArrayList<Integer> inputElements) {
         // finding average number
-        float total = 0;
+        double total = 0;
         for (int i = 0; i < inputElements.size(); i++) {
             total += inputElements.get(i);
         }
-        float avgElement = (total / inputElements.size());
+        double avgElement = (total / inputElements.size());
         System.out.println("Average is: " + avgElement);
     }
 }

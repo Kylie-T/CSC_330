@@ -34,10 +34,10 @@ class Project
     public static void average(List<int> inputElements)
     {
         // finding average number
-        float total = 0;
+        double total = 0;
         for (int i = 0; i < inputElements.Count; i++)
         { total += inputElements[i]; }
-        float avgElement = total / inputElements.Count;
+        double avgElement = total / inputElements.Count;
         Console.WriteLine($"Average is: {avgElement}");
     }
 
