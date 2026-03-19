@@ -11,7 +11,7 @@ public class Main {
 
     public static ArrayList<Integer> inputValues() {
         // taking in user input
-        String elements = "[";
+        String elements = "Your numbers are: [";
         ArrayList<Integer> inputElements = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
 

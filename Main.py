@@ -28,7 +28,7 @@ def average(input_elements):
     for value in input_elements:
         total += int(value)
     avg_num = total / len(input_elements)
-    print(f"Average is: {avg_num}\n")
+    print(f"Average is: {avg_num}")
 
 if __name__ == "__main__":
 

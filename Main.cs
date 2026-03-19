@@ -1,22 +1,22 @@
 using System;
-using Console; 
+using System.Collections.Generic;
 
-class Main
+class Project
 {
     public static List<int> inputValues()
     {
         // taking in user input
-        WriteLine("Enter single digit numbers separated by commas: ");
-        string userInput = ReadLine();
+        Console.Write("Enter single digit numbers separated by commas: ");
+        string userInput = Console.ReadLine();
 
         // parsing through input
-        List<int> inputElements;
+        List<int> inputElements = new List<int>();
         foreach (char value in userInput)
         {
             if (value != ',')
-            { inputElements.Add(value); }
+            { inputElements.Add(int.Parse(value.ToString())); }
         }
-        WriteLine($"Your numbers are: [{String.join(", ", inputElements)}]");
+        Console.WriteLine($"Your numbers are: [{string.Join(", ", inputElements)}]");
         return inputElements;
     }
 
@@ -28,17 +28,17 @@ class Main
         {
             if (inputElements[i] < minElement) { minElement = inputElements[i]; }
         }
-        WriteLine($"Minimum number is: {minElement}");
+        Console.WriteLine($"Minimum number is: {minElement}");
     }
 
-    public static void average(List<int> inputValues)
+    public static void average(List<int> inputElements)
     {
         // finding average number
         float total = 0;
-        for (int i = 1; i < inputElements.Count; i++)
-        { total += inputElements[0]; }
+        for (int i = 0; i < inputElements.Count; i++)
+        { total += inputElements[i]; }
         float avgElement = total / inputElements.Count;
-        WriteLine($"Average is: {avgElement}");
+        Console.WriteLine($"Average is: {avgElement}");
     }
 
     static void Main()
@@ -49,5 +49,3 @@ class Main
         average(inputElements);
     }
 }
-
-Main newMain = new Main();
