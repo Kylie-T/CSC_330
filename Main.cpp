@@ -9,7 +9,6 @@ using namespace std;
 vector<int> inputValues () {
     // taking in user input
     vector<int> inputElements;
-    string strInputElements;
     string userInput;
 
     cout << "Enter single digit numbers separated by commas: ";
@@ -18,7 +17,6 @@ vector<int> inputValues () {
     // parsing through input
     for (char value : userInput) {
         if (value != ',') {
-            strInputElements.push_back(value);
             inputElements.push_back(value - '0');
         }
     }
