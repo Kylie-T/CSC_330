@@ -23,7 +23,7 @@ if __name__ == "__main__":
         with open("/tmp/multi-lang-assignment-server2client", 'r') as pipeReader:      
             response = pipeReader.readline()
             pipeReader.close()
-            print(f"\033[32mPython: receiving response from C#, {i}(6, 3) = {response}")
+            print(f"\033[36mPython: receiving response from C#, {i}(6, 3) = {response}")
         time.sleep(.5)
 
     # check if user wishes to end or close the server
