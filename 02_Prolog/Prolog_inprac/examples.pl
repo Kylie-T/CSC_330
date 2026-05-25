@@ -14,20 +14,20 @@ list_min([H|T], Min) :-
     H > TMin, Min = TMin
     ).
 
-list_len([], 0)
+list_len([], 0).
 list_len([H|T], Count) :- list_len(T, PrevCount), Count is PrevCount + 1.
 
 list_sum([], 0).
-# list_sum([X], X). Don't need; or
+% list_sum([X], X). Don't need; or
 list_sum([X], X) :- !.
 list_sum([Item1, Item2|T], Sum) :- list_sum(T, PrevSum),
                                    Sum is H + PrevSum.
 
 list_append([], L, L).
 list_append([H|L1], L2, [H|L3]) :-
-    lsit_append(L1, L2, L3).
+    list_append(L1, L2, L3).
 
-list-rev([],[]).
+list_rev([],[]).
 list_rev([Head|Tail], RevList) :-
     list_rev(Tail, TailRevList),
     append(TailRevList, [Head], RevList).
